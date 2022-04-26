@@ -57,14 +57,15 @@ void BitmapManager::writeToFile(string fileName)
 void BitmapManager::generateBasic(int width, int height)
 {
     m_fileHeader = BMPFilheader();
-    m_fileHeader.file_size = width * height * 4;
+    m_fileHeader.file_size = (width * height * 4) + 138;
     m_fileHeader.offset = 138;
 
 	m_infoHeader = BMPInfoHeader();
-    m_infoHeader.size = 138;
+    m_infoHeader.size = 124;
     m_infoHeader.bit_count = 32;
     m_infoHeader.width = width;
 	m_infoHeader.height = height;
+    m_infoHeader.size_image = width * height;
 
 	m_colorHeader = BMPColorHeader();
 
