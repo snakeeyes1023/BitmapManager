@@ -75,21 +75,26 @@ void BitmapManager::generateBasic(int width, int height)
 void BitmapManager::buildCercle(int offsetX, int offsetY)
 {	
     fillBackground();
+
+    offsetX = (m_infoHeader.width / 2) + offsetX;
+    offsetY = (m_infoHeader.height / 2) + offsetY;
 	
 	//build cercle
-	for (int i = 0; i < m_data.size(); i += 4)
-	{
-		int x = i / 4 % m_infoHeader.width;
-		int y = i / 4 / m_infoHeader.width;
+    for (int i = 0; i < m_data.size(); i += 4)
+    {
+        int x = i / 4 % m_infoHeader.width;
+        int y = i / 4 / m_infoHeader.width;
 
-		if (sqrt(pow(x - offsetX, 2) + pow(y - offsetY, 2)) < m_infoHeader.height / 2)
-		{
-			m_data[i] = 0;
-			m_data[i + 1] = 0;
-			m_data[i + 2] = 0;
-			m_data[i + 3] = 255;
-		}
-	}
+        if (sqrt(pow(x - offsetX, 2) + pow(y - offsetY, 2)) < m_infoHeader.height / 2)
+        {
+            m_data[i] = 0;
+            m_data[i + 1] = 0;
+            m_data[i + 2] = 0;
+            m_data[i + 3] = 255;
+        }
+    }
+
+	
 }
 
 void BitmapManager::buildRectangle(int width, int height, int offsetX, int offsetY)

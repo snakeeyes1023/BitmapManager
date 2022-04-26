@@ -31,14 +31,14 @@ public:
 private:
 	string m_basePath;
 	
-#pragma region Bitmap component
+	#pragma region Bitmap component
 
 	vector<uint8_t> m_data{};
 	BMPFilheader m_fileHeader;
 	BMPInfoHeader m_infoHeader;
 	BMPColorHeader m_colorHeader;
 	
-#pragma endregion
+	#pragma endregion
 
 	string getFullMap(string path);
 };

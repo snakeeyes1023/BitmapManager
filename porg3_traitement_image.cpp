@@ -17,9 +17,9 @@ int main()
 
 	bitmapManager.generateBasic(600, 400);
 	
-	//bitmapManager.buildCercle(3, 2);
+	bitmapManager.buildCercle(0, 0);
 
-	bitmapManager.buildRectangle(20, 30, 10, 0);
+	//bitmapManager.buildRectangle(20, 30, 10, 0);
 	
 	bitmapManager.writeToFile("createdBitmapCercle.bmp");
 }
