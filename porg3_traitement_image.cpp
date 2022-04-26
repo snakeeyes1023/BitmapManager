@@ -1,7 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-
+#include "BitmapManager.h"
 #include "Headers.h"
 
 using namespace std;
@@ -9,40 +9,17 @@ using namespace std;
 
 int main()
 {
-    vector<uint8_t> data{};
-    BMPFilheader fileHeader;
-    BMPInfoHeader infoHeader;
-    BMPColorHeader colorHeader;
+    BitmapManager bitmapManager =  BitmapManager("BitmapTest");
 
-    ifstream image{ "shapes.bmp", ios::in | ios::binary };
-    if (image.is_open())
-    {
-        image.read((char*)&fileHeader, sizeof(fileHeader));
-        image.read((char*)&infoHeader, sizeof(infoHeader));
-        image.read((char*)&colorHeader, sizeof(colorHeader));
+	bitmapManager.loadBitmap("Shapes.bmp");
 
-        data.resize(infoHeader.size_image);
+	//bitmapManager.writeToFile("createdBitmap.bmp");
 
-        image.seekg(fileHeader.offset, image.beg);
-        image.read((char*)data.data(), data.size());
+	//bitmapManager.generateBasic(800, 600);
+	
+	//bitmapManager.buildCercle(3, 2);
 
-        image.close();
-    }
-
-    for (int i = 0; i < data.size(); i+=4)
-    {
-        data[i] = 255;
-        data[i + 1] = 0;
-        data[i + 2] = 0;
-        data[i + 3] = 255;
-    }
-
-    ofstream outImage{ "test.bmp", ios_base::binary };
-    if (outImage)
-    {
-        outImage.write((char*)&fileHeader, sizeof(fileHeader));
-        outImage.write((char*)&infoHeader, sizeof(infoHeader));
-        outImage.write((char*)&colorHeader, sizeof(colorHeader));
-        outImage.write((char*)data.data(), data.size());
-    }
+	bitmapManager.buildRectangle(20, 30, 0, 0);
+	
+	bitmapManager.writeToFile("createdBitmapCercle.bmp");
 }
