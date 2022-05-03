@@ -22,11 +22,21 @@ public:
 
 	void generateBasic(int width, int height);
 
-	void buildCercle(int offsetX, int offsetY);
+	void buildCercle(int rayon, int offsetX, int offsetY);
 
 	void buildRectangle(int width, int height, int offsetX, int offsetY);
 
 	void fillBackground();
+
+	void blur();
+
+	void ExtractEachAdjacent(int i, int& nbVal, int& r, int& g, int& b);
+
+	void negativeFilter();
+
+	void hideMessage(string message);
+
+	string readMessage();
 	
 private:
 	string m_basePath;

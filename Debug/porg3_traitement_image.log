@@ -1,6 +1,17 @@
 ﻿  BitmapManager.cpp
-Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(32,23): warning C4018: '<' : incompatibilité signed/unsigned
-Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(83,23): warning C4018: '<' : incompatibilité signed/unsigned
-Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(107,23): warning C4018: '<' : incompatibilité signed/unsigned
-Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(127,23): warning C4018: '<' : incompatibilité signed/unsigned
+Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(90,20): warning C4018: '<' : incompatibilité signed/unsigned
+Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(121,20): warning C4018: '<' : incompatibilité signed/unsigned
+Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(144,20): warning C4018: '<' : incompatibilité signed/unsigned
+Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(155,20): warning C4018: '<' : incompatibilité signed/unsigned
+Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(181,33): warning C4018: '<' : incompatibilité signed/unsigned
+Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(197,12): warning C4018: '<' : incompatibilité signed/unsigned
+Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(208,20): warning C4018: '<' : incompatibilité signed/unsigned
+Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(226,37): warning C4267: '=' : conversion de 'size_t' en '_Ty', perte possible de données
+          with
+          [
+              _Ty=uint8_t
+          ]
+Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(228,27): warning C4018: '<' : incompatibilité signed/unsigned
+Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(230,17): warning C4018: '>' : incompatibilité signed/unsigned
+Z:\cegep-5\p3\BitmapManager\BitmapManager.cpp(253,27): warning C4018: '<' : incompatibilité signed/unsigned
   porg3_traitement_image.vcxproj -> Z:\cegep-5\p3\BitmapManager\Debug\porg3_traitement_image.exe
